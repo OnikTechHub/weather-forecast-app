@@ -376,11 +376,11 @@ function renderHourlyForecast(forecast) {
     const pop = Math.round((slot.pop || 0) * 100);
 
     return `
-      <div class="hourly-card">
+      <div class="hourly-card flex-shrink-0">
         <span class="text-xs font-mono font-medium text-slate-300">${timeLabel}</span>
-        <img src="https://openweathermap.org/img/wn/${icon}.png" alt="${condition}" class="w-10 h-10 object-contain my-0.5" />
-        <span class="text-sm font-bold text-white">${temp}°</span>
-        <span class="text-[11px] font-mono text-sky-400 flex items-center gap-0.5">
+        <img src="https://openweathermap.org/img/wn/${icon}.png" alt="${condition}" class="w-9 h-9 sm:w-10 sm:h-10 object-contain my-0.5" />
+        <span class="text-xs sm:text-sm font-bold text-white">${temp}°</span>
+        <span class="text-[10px] sm:text-[11px] font-mono text-sky-400 flex items-center gap-0.5">
           <i data-lucide="droplet" class="w-3 h-3 inline"></i>
           ${pop}%
         </span>
@@ -434,17 +434,17 @@ function render5DayForecast(forecast) {
     const maxT = formatTemp(day.maxTemp);
 
     return `
-      <article class="forecast-card group">
+      <article class="forecast-card flex-shrink-0 group">
         <div class="w-full flex items-center justify-between text-xs pb-2 border-b border-white/5">
           <span class="font-bold text-white tracking-wide uppercase font-mono">${dayTitle}</span>
           <span class="text-slate-400 font-mono text-[11px]">${formattedDate}</span>
         </div>
 
-        <div class="my-4 flex flex-col items-center">
-          <div class="w-14 h-14 relative flex items-center justify-center transition-transform group-hover:scale-110">
+        <div class="my-3 sm:my-4 flex flex-col items-center">
+          <div class="w-12 h-12 sm:w-14 sm:h-14 relative flex items-center justify-center transition-transform group-hover:scale-110">
             <img src="https://openweathermap.org/img/wn/${topIcon}@2x.png" alt="${topCondition}" class="w-full h-full object-contain drop-shadow" />
           </div>
-          <span class="text-xs font-medium text-slate-300 mt-1 capitalize">${topCondition}</span>
+          <span class="text-xs font-medium text-slate-300 mt-1 capitalize truncate max-w-full">${topCondition}</span>
         </div>
 
         <div class="w-full space-y-2 pt-2 border-t border-white/5">
@@ -459,9 +459,9 @@ function render5DayForecast(forecast) {
           <div class="flex items-center justify-between text-[11px] text-slate-400 font-mono">
             <span class="flex items-center gap-1">
               <i data-lucide="droplets" class="w-3 h-3 text-sky-400 inline"></i>
-              ${rainChance}% Rain
+              ${rainChance}%
             </span>
-            <span class="text-[10px] text-slate-500 uppercase">Outlook</span>
+            <span class="text-[10px] text-slate-500 uppercase tracking-wider">Outlook</span>
           </div>
         </div>
       </article>
