@@ -11,7 +11,7 @@
 
 ## 🌐 Live Demo
 
-- **Live URL:** [https://weather-forecast-app-datheon.vercel.app](https://weather-forecast-app-datheon.vercel.app) *(or your deployed Vercel URL)*
+- **Live URL:** [https://sky-pulse-weather-swart.vercel.app/](https://sky-pulse-weather-swart.vercel.app/)
 
 ---
 
